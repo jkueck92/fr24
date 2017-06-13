@@ -1,0 +1,31 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name="org.hibernate.tutorial.jpa" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <class>de.blackstar.database.entity.AEntity</class>
+        <class>de.blackstar.database.entity.Flight</class>
+        <class>de.blackstar.database.entity.Airport</class>
+        <class>de.blackstar.database.entity.Country</class>
+        <class>de.blackstar.database.entity.Airline</class>
+        <class>de.blackstar.database.entity.Aircraft</class>
+        <class>de.blackstar.database.entity.AircraftType</class>
+        <class>de.blackstar.database.entity.AircraftTypeDescription</class>
+        <properties>
+
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/blackstar"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="root"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
