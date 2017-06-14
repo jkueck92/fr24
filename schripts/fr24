@@ -1,0 +1,18 @@
+#!/bin/bash
+# Fr24
+#
+# description: bla bla
+
+case $1 in
+    start)
+        /bin/bash /usr/local/bin/fr24-reader-start.sh
+    ;;
+    stop)
+        /bin/bash /usr/local/bin/fr24-reader-stop.sh
+    ;;
+    restart)
+        /bin/bash /usr/local/bin/fr24-reader-stop.sh
+        /bin/bash /usr/local/bin/fr24-reader-start.sh
+    ;;
+esac
+exit 0
